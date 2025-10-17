@@ -1,0 +1,5 @@
+line_item_id,sale_id,product_id,product_name,category,quantity,unit_price,total,discount
+LI001,S001,P001,Flower A,Flower,2,30,60,0
+LI002,S001,P002,Edible B,Edible,1,40,40,10
+LI003,S002,P001,Flower A,Flower,1,30,30,0
+LI004,S003,P003,Concentrate C,Concentrate,1,50,50,5

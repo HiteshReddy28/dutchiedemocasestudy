@@ -1,0 +1,4 @@
+sale_id,ts,location_name,order_type,subtotal,discount_amount,tax_amount,total,number_of_items,staff_id,voided,refunded
+S001,2025-09-01T10:15:00Z,Columbus,Pickup,100,10,7,97,3,A001,false,false
+S002,2025-09-01T14:30:00Z,Cincinnati,Delivery,80,0,6,86,2,A002,false,false
+S003,2025-09-02T18:45:00Z,Columbus,Pickup,50,5,3,48,1,A001,false,true
