@@ -70,9 +70,6 @@ coverage.xml
 *.swp
 *.bak
 
-# DuckDB or local DB files
-*.duckdb
-
 # Notes / secrets
 notes.txt
 config.json
