@@ -116,7 +116,7 @@ def derive_calendar(df: pd.DataFrame) -> pd.DataFrame:
 def _calendar_key_from_ts_local(ts_local: pd.Series) -> pd.Series:
     """Return integer UTC-minute epoch key (stable, tz-agnostic for joins)."""
     # Ensure tz-aware then convert to UTC; use int64 ns -> minutes
-    return (ts_local.dt.tz_convert("UTC").view("int64") // 60_000_000_000)
+    return (ts_local.dt.tz_convert("UTC").astype("int64") // 60_000_000_000)
 
 
 def compute_discount_rate(df: pd.DataFrame) -> pd.DataFrame:

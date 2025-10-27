@@ -252,7 +252,7 @@ def render_dashboard():
                     try:
                         upsert_from_files(sales_paths or None, items_paths or None)
                         st.success("Files processed successfully!")
-                        st.experimental_rerun()  # Reload to show new data
+                        st.rerun()  # Reload to show new data
                     except Exception as e:
                         st.error(f"Error processing files: {e}")
                     finally:
@@ -262,8 +262,6 @@ def render_dashboard():
                                 Path(p).unlink()
                             except Exception:
                                 pass
-                    # upsert_from_files handles tz/calendar_id inside ETL
-                    upsert_from_files(sales_paths or None, items_paths or None)
                 st.success("Files processed and loaded into the warehouse.")
                 st.cache_data.clear()  # ensure fresh read after ingest
 
